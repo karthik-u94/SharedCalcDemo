@@ -19,3 +19,10 @@ Used socket.io with node to acheive concurrent updates of calculation history in
 3. Start the server: `node server.js`
 4. View in browser at `http://localhost:8080`
 
+## Demo
+User 1 performs a calculation
+![User 1](https://imgur.com/3B4R8qs)
+
+User 2's screesn shows the updated calculation log
+![User 2](https://imgur.com/itfqypw)
+
