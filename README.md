@@ -11,7 +11,7 @@ Used socket.io with node to acheive concurrent updates of calculation history in
 
 ## Installation
 
-1. Clone the repository: `git clone git@github.com:scotch-io/node-todo`
+1. Clone the repository: `git clone https://github.com/karthik-u94/SharedCalcDemo.git`
 2. Install application: `npm install`
 3. Start the server: `node server.js`
 4. View in browser at `http://localhost:8080`
