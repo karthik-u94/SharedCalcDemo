@@ -23,6 +23,6 @@ Used socket.io with node to acheive concurrent updates of calculation history in
 User 1 performs a calculation
 ![User 1](https://imgur.com/3B4R8qs.png)
 
-User 2's screesn shows the updated calculation log
+User 2's screen shows the updated calculation log
 ![User 2](https://imgur.com/itfqypw.png)
 
