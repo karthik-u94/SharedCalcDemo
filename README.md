@@ -20,6 +20,9 @@ Used socket.io with node to acheive concurrent updates of calculation history in
 4. View in browser at `http://localhost:8080`
 
 ## Demo
+
+.[Live demo](http://ec2-18-219-39-226.us-east-2.compute.amazonaws.com:8080/)
+
 User 1 performs a calculation
 ![User 1](https://imgur.com/3B4R8qs.png)
 
