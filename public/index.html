@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html ng-app="calculator">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Shared Calculator App</title>
+
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<style>
+		html {
+			overflow-y: scroll;
+		}
+
+		body {
+			padding-top: 50px;
+		}
+
+		#calc-list {
+			margin-bottom: 30px;
+		}
+
+		#todo-form {
+			margin-bottom: 50px;
+		}
+	</style>
+
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script><!-- load angular -->
+	<script src="core.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+</head>
+
+<body ng-controller="mainController">
+	<div class="container">
+
+		<div class="jumbotron text-center">
+			<h1>Shared Calculator</h1>
+		</div>
+
+		
+
+		<div id="todo-form" class="row">
+			<div class="col-sm-8 col-sm-offset-2 text-center">
+				<form name="calcForm" ng-submit=calculate()>
+					<div class="col-sm-4">
+						<input type="number" ng-model="a" placeholder="Number 1" required>
+					</div>
+					<div class="col-sm-4">
+						<select ng-model="op" required>
+							<option value="" disabled selected hidden>Select operation</option>
+							<option>+</option>
+							<option>*</option>
+							<option>-</option>
+							<option>/</option>
+						</select>
+					</div>
+					<div class="col-sm-4" >
+						<input type="number" ng-model="b" placeholder="Number 2" required>
+					</div>
+					
+					<div class="padding-top:30px text-center">
+						<button type="submit" class="btn btn-primary btn-lg"  ng-disabled="calcForm.$invalid" >Calculate</button>
+					</div>
+					
+				</form>
+				
+
+			</div>
+		</div>
+		
+		<div class="margin-top:20px text-center">
+			<b>Result: {{result}}</b>
+		</div>
+		<div class="jumbotron text-center margin-top:20px">
+			<h2>Previous Calculations</h2>
+		</div>
+		<div id="calc-list" class="row">
+			<div class="col-sm-4 col-sm-offset-4">
+
+				<div class="checkbox" ng-repeat="calc in calcList | orderBy: '-ts'">
+					<label>
+						<p> {{ calc.calc }}</p>
+					</label>
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+
+</body>
+
+</html>
