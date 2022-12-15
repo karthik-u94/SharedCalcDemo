@@ -5,7 +5,7 @@
   "main": "server.js",
   "author": "karthik",
   "dependencies": {
-    "express": "~4.7.2",
+    "express": "~4.17.3",
     "body-parser": "~1.5.2",
     "method-override": "~2.1.2",
     "socket.io": "^2.1.1"
